@@ -11953,9 +11953,33 @@ fieldset:disabled .btn {
 
 .sidebar {
   width: 280px;
+  margin-left: -280px;
+  -webkit-transition: margin-left .25s;
+  transition: margin-left .25s;
 }
 
 .main {
-  width: calc(100vw - 280px);
+  width: 100%;
+}
+
+.sidebar-toggled .sidebar {
+  margin-left: 0;
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    margin-left: 0;
+    width: 280px;
+  }
+  .main {
+    width: calc(100vw - 280px);
+  }
+  .sidebar-toggled .sidebar {
+    margin-left: -280px;
+  }
+  .sidebar-toggled .main {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 /*# sourceMappingURL=all.css.map */
