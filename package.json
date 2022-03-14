@@ -1,0 +1,22 @@
+{
+  "name": "dashboardlive",
+  "version": "1.0.0",
+  "description": "後台管理 - 功能性為導向的介面規劃",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GeeHsu/dashboardlive.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GeeHsu/dashboardlive/issues"
+  },
+  "homepage": "https://github.com/GeeHsu/dashboardlive#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
