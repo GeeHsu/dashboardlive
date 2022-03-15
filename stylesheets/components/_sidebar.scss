@@ -5,6 +5,31 @@ $sidebar-width: 280px;
   width: $sidebar-width;
   margin-left: -$sidebar-width;
   transition: margin-left .25s;
+  // sidebar-link
+  .sidebar-link {
+    color: $dark;
+    display: block;
+    text-decoration: none;
+    padding-top: 0.875rem;
+    padding-bottom: 0.875rem;
+    &:hover {
+      background-color: rgba($primary, 0.16);
+    }
+  }
+  .sidebar-link.active {
+    position: relative;
+    color: $primary !important;
+    background-color: rgba($primary, 0.16);
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 2px;
+      height: 100%;
+      width: 3px;
+      background: $primary;
+    }
+  }
 }
 .main {
   width: 100%;
