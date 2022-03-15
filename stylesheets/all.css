@@ -11956,6 +11956,8 @@ fieldset:disabled .btn {
   margin-left: -280px;
   -webkit-transition: margin-left .25s;
   transition: margin-left .25s;
+  position: fixed;
+  top: 0;
 }
 
 .sidebar .sidebar-link {
@@ -11994,6 +11996,10 @@ fieldset:disabled .btn {
   margin-left: 0;
 }
 
+.sidebar-toggled .main {
+  margin-left: 280px;
+}
+
 @media (min-width: 992px) {
   .sidebar {
     margin-left: 0;
@@ -12001,6 +12007,9 @@ fieldset:disabled .btn {
   }
   .main {
     width: calc(100vw - 280px);
+    margin-left: 280px;
+    -webkit-transition: margin-left .25s;
+    transition: margin-left .25s;
   }
   .sidebar-toggled .sidebar {
     margin-left: -280px;
