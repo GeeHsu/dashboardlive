@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>後台管理 - 首頁</title>
+  <title>後台管理 - 訂單列表</title>
   <link rel="stylesheet" href="./stylesheets/all.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
@@ -21,7 +21,7 @@
       <!-- 2. 選單 -->
       <div class="overflow-auto mt-3">
         <div>
-          <a href="home.html" class="sidebar-link active">
+          <a href="home.html" class="sidebar-link">
             <div class="px-4">
               <i class="bi bi-house me-2"></i>
               首頁
@@ -40,7 +40,7 @@
             </div>
           </a>
           <div class="collapse" id="menu-order">
-            <a href="orders.html" class="sidebar-link">
+            <a href="orders.html" class="sidebar-link active">
               <div class="ps-5">
                 訂單列表
               </div>
@@ -171,7 +171,7 @@
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="#">修改狀態</a></li>
-                            <li><a class="dropdown-item" href="#">刪除訂單</a></li>
+                            <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-order-id="TX20220315171601">刪除訂單</a></li>
                           </ul>
                       </div>
                     </td>
@@ -194,7 +194,7 @@
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="#">修改狀態</a></li>
-                            <li><a class="dropdown-item" href="#">刪除訂單</a></li>
+                            <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-order-id="TX20220315170201">刪除訂單</a></li>
                           </ul>
                       </div>
                     </td>
@@ -217,7 +217,7 @@
                           </button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="#">修改狀態</a></li>
-                            <li><a class="dropdown-item" href="#">刪除訂單</a></li>
+                            <li><a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-order-id="TX20220315190301">刪除訂單</a></li>
                           </ul>
                       </div>
                     </td>
@@ -237,6 +237,24 @@
               </ul>
             </nav>
           </div>
+          <!-- Modal -->
+          <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">刪除訂單</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  確認刪除「<span id="deleteText"></span>」的訂單嗎？
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">取消</button>
+                  <button type="button" class="btn btn-danger">確認刪除</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -246,6 +264,7 @@
 
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="./javascripts/modal.js"></script>
   <script src="./javascripts/all.js"></script>
 </body>
 </html>
